@@ -29,6 +29,9 @@
 </head>
 
 <body>
+    @php
+        $current_route = request()->route()->getName();
+    @endphp
     <div class="container-flex" style="padding: 0%; display: flex;" >
         @section('sidebar')
             <nav class="sidebar">
@@ -84,8 +87,8 @@
                     <div class="user-div">
                         <ul class="user-ul">
                             <li class="user">
-                                <p><span class="uname">Welcome Admin</span> <img src="{{asset('images/user default.webp')}}" alt=""></p>
-                                <a href="#"><ul class="logout">
+                                <p><span class="uname">Welcome {{auth()->user()->name}}</span> <img src="{{asset('images/user default.webp')}}" alt=""></p>
+                                <a href="{{ route('logoutu') }}"><ul class="logout">
                                     <li>Logout</li>
                                 </ul></a>
                             </li>

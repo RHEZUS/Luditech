@@ -7,7 +7,7 @@
     @if(isset($article->id))
     <form action="{{route('update_article')}}" class="row bg-white mx-3 my-3 p-2 rounded" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
-            <input type="hidden" name="title" id="title" class="form-control" value="{{$article->id}}"> 
+            <input type="hidden" name="id" id="id" class="form-control" value="{{$article->id}}"> 
         </div> 
     @else
     <form action="{{route('store_article')}}" class="row bg-white mx-3 my-3 p-2 rounded" method="POST" enctype="multipart/form-data">
@@ -37,7 +37,7 @@
                 <select class="form-select form-select-lg fs-6" name="category" id="category">
                     <option selected>Select one</option>
                     @foreach($category as $item)
-                    <option value="{{$item['id']}}" class="">{{$item['title']}}</option>
+                    <option value="{{$item['id']}}" {{(isset($article) && $item['id']= $article->category_id ? 'selected="selected"' : '') }} class="">{{$item['title']}}</option>
                     @endforeach
                     <option value="new">New</option>
                 </select>
@@ -57,10 +57,10 @@
             <div class="mb-3">
                 
                 <label for="feat-image" class="form-label">Featured Image</label> <br>
-                <input accept="image/*"  type="file" value="{{(isset($article) ? asset('app/storage/thumbnails/'.$article->thumbnail) : asset('images/image-placeholder.png')) }}" class="form-control" name="thumbnail" id="imgInp" placeholder="" aria-describedby="fileHelpId">
+                <input accept="image/*"  type="file" value="{{(isset($article) ? $article->thumbnail : asset('images/image-placeholder.png')) }}" class="form-control" name="thumbnail" id="imgInp" placeholder="" aria-describedby="fileHelpId">
                 <div class="preview-image my-2">
 
-                    <img id="blah" src="{{(isset($article) ? asset('app/storage/thumbnails/'.$article->thumbnail) : asset('images/image-placeholder.png')) }}" alt="your image" />
+                    <img id="blah" src="{{(isset($article) ? asset('storage/thumbnails/' . $article->thumbnail) : asset('images/image-placeholder.png')) }}" alt="your image" />
 
                 </div> 
             </div>
@@ -69,7 +69,7 @@
                 <label for="tags-input" class="form-label">Post lable</label>
                 <div class="tag-contain">
 
-                    <input type =" text" name ="tags" id="tags-input" placeholder="Type your tag here ..." value="{{(isset($article) ? foreach($article->tags as $arTags)$arTags->tag->name.',' endforeach : '') }}">
+                    <input type =" text" name ="tags" id="tags-input" placeholder="Type your tag here ..." value="{{(isset($article) ? $tags : '') }}">
                 </div>
             </div>
 

@@ -13,8 +13,12 @@ class Article extends Model
     {
         return $this->hasMany(ArticleTag::class, "article_id", "id");
     }
-    public function categories()
+    public function category()
     {
-        return $this->hasMany(ArticleCategory::class, "article_id", "id");
+        return $this->belongsTo(Category::class, "category_id", "id");
+    }
+    public function author()
+    {
+        return $this->belongsTo(User::class, "author_id", "id");
     }
 }

@@ -4,6 +4,22 @@
     
  
 @section('content')
+
+@if(session('success'))
+    
+    <div class="alert alert-success">
+        <strong>Success!</strong>{{session('success')}}
+    </div>
+@endif
+@if(session('error'))
+    <div class="alert alert-danger">
+        <strong>Success!</strong>{{session('error')}}
+    </div>
+
+@endif
+
+
+<div class="text-success"></div>
 <table class="table">
     <thead class="thead-dark">
         <tr>
@@ -20,16 +36,13 @@
             <th scope="row">{{$item->id}}</th>
             <td>
                 {{$item->title}}
-                <p class="options"><a href={{"/dasboard/edit/".$item['id']}}>Edit</a> <a href={{"/dasboard/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">liste</a></p>
+                <p class="options"><a href={{"/dashboard/edit/".$item['id']}}>Edit</a> <a href={{"/dashboard/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">liste</a></p>
             </td>
             <td>
-            @foreach($item->categories as $ArticleCategory)
-
-                {{$ArticleCategory->category->name}}
-
-            @endforeach
+            
+                {{$item->category->title}}
             </td>
-            <td> </td>
+            <td>{{$item->author->name}} </td>
             <td>
                 {{$item['created_at']}}
             </td>
