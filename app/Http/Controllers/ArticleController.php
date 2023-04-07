@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\ArticleCategory;
 use App\Models\Tag;
 use App\Models\ArticleTag;
+use App\Models\User;
 
 class ArticleController extends Controller
 {
@@ -92,7 +93,11 @@ class ArticleController extends Controller
     public function list(){
         $data = [];
         $data['articles'] = Article::all();
+        $data['category'] = Category::all();
+        $data['authors'] = User::all();
         return view('dashboard/articles/article_list',$data);
+
+
     }
     public function edit($id){
         
@@ -195,5 +200,30 @@ class ArticleController extends Controller
             $item->delete();
         }
         return redirect()->route('list_article')->with('success', 'Article deleted successfully...');
+    }
+
+    public function filter(Request $request){
+        if (isset($request->title) || isset($request->category)  || isset($request->author)) {
+
+            
+
+            $data = [];
+            $data['category'] = Category::all();
+            $data['authors'] = User::all();
+            
+            $data['articles'] = Article::where('title','=',$request->title)
+                                        -> orWhere('category_id','=',$request->category)
+                                        -> orWhere('author_id','=',$request->author)
+                                        -> get();
+        }else{
+            
+            return redirect()->route('list_article');
+        }
+        if($data){
+            return  view('dashboard/articles/article_list',$data);
+        }
+        else{
+            return redirect()->route('list_article');
+        }
     }
 }

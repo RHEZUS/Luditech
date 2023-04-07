@@ -33,6 +33,7 @@ Route::group(['middleware'=> ['admin_auth']],function(){
     Route::post('/dashboard/update',[ArticleController::class, 'update'])->name('update_article');
     
     Route::get('/dashboard/list',[ArticleController::class, 'list'])->name('list_article');
+    Route::post('dashboard/list', [ArticleController::class, 'filter'])->name('filter');
     Route::get('/dashboard/delete/{id}',[ArticleController::class, 'delete']);
     
     

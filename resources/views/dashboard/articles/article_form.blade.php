@@ -57,7 +57,16 @@
             <div class="mb-3">
                 
                 <label for="feat-image" class="form-label">Featured Image</label> <br>
-                <input accept="image/*"  type="file" value="{{(isset($article) ? $article->thumbnail : asset('images/image-placeholder.png')) }}" class="form-control" name="thumbnail" id="imgInp" placeholder="" aria-describedby="fileHelpId">
+                
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Upload</span>
+                    </div>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" value="{{(isset($article) ? $article->thumbnail : asset('images/image-placeholder.png')) }}" name="thumbnail" id="imgInp" placeholder="" aria-describedby="fileHelpId">
+                      <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                    </div>
+                  </div>
                 <div class="preview-image my-2">
 
                     <img id="blah" src="{{(isset($article) ? asset('storage/thumbnails/' . $article->thumbnail) : asset('images/image-placeholder.png')) }}" alt="your image" />
