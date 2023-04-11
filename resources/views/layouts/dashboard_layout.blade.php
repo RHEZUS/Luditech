@@ -128,7 +128,7 @@
                     <div class="user-div">
                         <ul class="user-ul">
                             <li class="user">
-                                <p><span class="uname">Welcome {{auth()->user()->name}}</span> <img src="{{asset('images/user default.webp')}}" alt=""></p>
+                                <p><span class="uname">Welcome {{auth()->user()->name}}</span> <img style="border-radius: 50%" src="{{asset('storage/profile_pictures/'.auth()->user()->profile_picture)}}" alt=""></p>
                                 <a href="{{ route('logoutu') }}"><ul class="logout">
                                     <li>Logout</li>
                                 </ul></a>

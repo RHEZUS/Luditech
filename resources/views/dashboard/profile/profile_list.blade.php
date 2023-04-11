@@ -4,6 +4,14 @@
  
 @section('content')
 
+@if (session('success'))
+    <div class="alert alert-success">{{session('success')}}</div>
+
+@endif
+@if (session('error'))
+    <div class="alert alert-danger">{{session('danger')}}</div>
+@endif
+
 <div class="card mx-3 my-3 p-2 bg-white">
     <div class="card-header">
         <h3 class="card-title">Users list table</h3>
@@ -27,7 +35,7 @@
                     <td>{{$item['id']}}</td>
                     <td>{{$item['name']}}
                         
-                        <p class="options"><a href={{"/dashboard/edit/".$item['id']}}>Edit</a> <a href={{"/dashboard/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">liste</a></p>
+                        <p class="options"><a href={{"/dashboard/user/edit/".$item['id']}}>Edit</a> <a href={{"/dashboard/user/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">liste</a></p>
                     </td>
                     <td>{{$item['email']}}</td>
                     <td>{{$item['created_at']}}</td>

@@ -54,6 +54,10 @@ Route::group(['middleware'=> ['admin_auth']],function(){
     Route::get('/dashboard/profile/profile_form', [ProfileController::class, 'get_page'])->name('get_create_user');
     Route::post('/dashboard/profile/profile_form', [ProfileController::class, 'create'])->name('create_user');
     Route::get('/dashboard/profile/profile_list/', [ProfileController::class, 'list_profile'])->name('list_profile');
+
+    Route::get('dashboard/user/delete/{id}', [ProfileController::class, 'delete']);
+    Route::get('dashboard/user/edit/{id}', [ProfileController::class, 'edit']);
+    Route::post('dashboard/user/update', [ProfileController::class, 'update'])->name('update_user');
     
 });
 
