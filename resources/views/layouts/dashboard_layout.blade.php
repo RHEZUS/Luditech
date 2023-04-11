@@ -26,6 +26,15 @@
     <!--fav icon-->
     <link rel="shortcut icon" href="{{asset('images/logo.webp')}}" type="image/x-icon">
 
+
+    <!-- Croppie -->
+    <link rel="stylesheet" href="croppie.css" />
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}} ">
+    <link rel="stylesheet" href="{{asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+
 </head>
 
 <body>
@@ -34,53 +43,85 @@
     @endphp
     <div class="container-flex" style="padding: 0%; display: flex;" >
         @section('sidebar')
-            <nav class="sidebar">
-                <header>
-                    <div class="logo-text">
-                        <img class="logo" src="{{asset('images/logo.webp')}}" alt="">
-                        <h3 class="list-item-lable">Codinglab <br> <span>web development</span></h3>
-                    </div>
-                </header>
-                <main>
-                    <ul class="menu">
-                        <li class="list-item search-box">
-                            <i class='bx bx-search' ></i>
-                            <input class="list-item-lable" type="text" name="search" id="search">
-                        </li>
-                        <a href="{{route('dashboard')}}"><li class="list-1-item"><i class='bx bx-home' ></i><span class="list-item-lable" id="dashboard"> Dashboard </span></li></a>
-                        <a href=""><li class="list-1-item"><i class='bx bx-bar-chart-alt-2'></i><span class="list-item-lable"> Articles</span>
-                            <ul class="dropdown" id="sidebar-dropdown">
-                                <a href="{{route('list_article')}}" class="nav-link active"><li>All articles</li></a>
-                                <a href="{{route('create_article')}}" class="nav-link active"><li>Add New</li></a>
-                                <a href="#" class="nav-link active"><li>Add New</li></a>
 
-                            </ul>
-                        </li></a>
-                        <a href=""><li class="list-1-item"><i class='bx bx-bell' ></i><span class="list-item-lable"> Notification</span></li></a>
-                        <a href=""><li class="list-1-item"><i class='bx bx-pie-chart-alt'></i><span class="list-item-lable"> Analyses</span></li></a>
-                        <a href=""><li class="list-1-item"><i class='bx bx-heart'></i><span class="list-item-lable"> Likes</span></li></a>
-                        <a href=""><li class="list-1-item"><i class='bx bx-wallet' ></i><span class="list-item-lable"> Wallet</span></li></a> 
-                    </ul>
-                </main>
-                <footer><br>
-                    <ul class="menu-footer">
-                        <a href=""><li class="list-item"><i class='bx bx-log-out' ></i> <span class="list-item-lable"> Logout</span></li></a>
-                        <li class="list-item">
-                            <div class="sun-moon">
-                                <i class='bx bx-sun' ></i> 
-                                <i class='bx bx-moon' ></i>
-                            </div>
-                            <div class="list-item-lable">
-                                Dark mode
-
-                                <span class="toggle"></span>
-                            </div> 
-                            
-                        </li> 
-                    </ul>
-                </footer>
-            </nav>
+            <div class="left-sidebar px-3  bg-white" style="width: 340px;">
+                <div class="wrapper d-flex py-4">
+                <img src="{{asset('images/logo.webp')}}" class="my-2" style="width: 50px; height: 50px;" alt="">
+                <h3 class="list-item-lable px-3">Luditech<br> <span class="fs-5">web development</span></h3>
+                </div>
         
+                <div class="left-sidebar-items my-3" >
+                <div class="item-1 my-3 py-2" style="{{$current_route  == 'dashboard' ? 'background-color: #695cfe; color: white;' : ''}}">
+                    <a  href="{{route('dashboard')}}" class="item-1-elt mx-3 shadow-none" style="border: none; {{$current_route  == 'dashboard' ? 'color: white;' : ''}}">
+                        <i class='bx bxs-dashboard fs-4 me-3'></i> <span>Dashboard</span> 
+                    </a>
+                </div>
+                <div class="item-1 my-3" style="{{$current_route  == 'create_article' || $current_route  == 'list_article' ? 'background-color: #695cfe; color: white;' : ''}}">
+                    <button class="btn item-1-elt  dropdown-toggle shadow-none" style="border: none; {{$current_route  == 'create_article' || $current_route  == 'list_article' ? ' color: white;' : ''}}" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class='bx bx-news fs-4 me-3'></i><span class="my-auto"> Article</span>
+                    </button>
+                    <div class="dropdown-menu border-0 w-100" aria-labelledby="triggerId">
+                    <a class="dropdown-item" href="{{route('create_article')}}">Add New</a>
+                    <a class="dropdown-item " href="{{route('list_article')}}">All Articles</a>
+                    <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </div>
+
+                <?php 
+                
+                    if (auth()->user()->is_admin) {
+                        # code...
+                ?>
+
+                <div class="item-1 my-3" style="{{$current_route  == 'get_create_user' || $current_route  == 'list_profile' ? 'background-color: #695cfe; color: white;' : ''}}">
+                    <button class="btn item-1-elt dropdown-toggle shadow-none" style="border: none; {{$current_route  == 'get_create_user' || $current_route  == 'list_profile' ? ' color: white;' : ''}}" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fa fa-users fs-4 me-3"></i><span> Users</span>
+                        </button>
+                    <div class="dropdown-menu border-0 w-100" aria-labelledby="triggerId">
+                    <a class="dropdown-item" href="{{route('create_user')}}">Add New</a>
+                    <a class="dropdown-item " href="{{route('list_profile')}}">All Users</a>
+                    <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </div>
+
+                <?php 
+                    }
+                ?>
+        
+                <div class="item-1 my-3">
+                    <button class="btn item-1-elt dropdown-toggle shadow-none" style="border: none;" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class='bx bx-clipboard fs-4 me-3' ></i><span>Training</span> 
+                        </button>
+                    <div class="dropdown-menu border-0 w-100"  aria-labelledby="triggerId">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item " href="#">Disabled action</a>
+                    <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </div>
+        
+                <div class="item-1 my-3 py-2">
+                    <a href="#" class="item-1-elt shadow-none mx-3 py-1" style="border: none;" >
+                        <i class="fa fa-bar-chart fs-3 me-3"></i><span > Statistics</span>
+                    </a>
+                </div>
+        
+                <div class="item-1 my-5 py-2">
+                    <div class="item">
+                        <a class="item-1-elt shadow-none mx-3 py-1" style="border: none;"  >
+                            <i class='bx bx-log-out fs-3 me-3' ></i><span> Logout</span>
+                        </a>
+                    </div>
+                </div>
+              
+            </div>
+    
+              
+    
+          </div>
+            
             <div class="page-content">
 
                 <div class="top-navbar-row">
@@ -121,6 +162,32 @@
 
     <!-- Website scripts -->
     <script src="{{asset('js/script.js')}}"></script>
+
+    <!-- Croppie -->
+
+    <link rel="stylesheet" href="croppie.css" />
+    <script src="croppie.js"></script>
+
+    <!-- Font awsome icons -->
+    <script src="https://kit.fontawesome.com/5fe79ecddc.js" crossorigin="anonymous"></script>
+
+    <!-- DataTables  & Plugins -->
+    <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/jszip/jszip.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/pdfmake/pdfmake.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/pdfmake/vfs_fonts.js')}}"></script>
+    <script src="{{asset('assets/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+    
+    <!-- AdminLTE App -->
+    <script src="{{asset('assets/dist/js/adminlte.min.js')}} "></script>
+    
 
  </body>
 

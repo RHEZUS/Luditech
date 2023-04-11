@@ -1,62 +1,48 @@
 @extends('../layouts.dashboard_layout')
 @section('title', 'Dasboard')
-@section('sidebar')
-    
+@section('sidebar')  
  
 @section('content')
 
-@if(session('success'))
-    
-    <div class="alert alert-success">
-        <strong>Success!&nbsp;&nbsp;</strong>{{session('success')}}
-    </div>
-@endif
-@if(session('error'))
-    <div class="alert alert-danger">
-        <strong>Error! &nbsp;&nbsp;</strong>{{session('error')}}
-    </div>
-
-@endif
-
 <div class="card mx-3 my-3 p-2 bg-white">
     <div class="card-header">
-        <h3 class="card-title">Article list table</h3>
+        <h3 class="card-title">Users list table</h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
-                    <th scope="col"># Id</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Author</th>
-                    <th scope="col">Created At</th>
+                    <th>User_id</th>
+                    <th>User_name</th>
+                    <th>User_email</th>
+                    <th>Created_at</th>
+                    <th>Number of post</th>
                 </tr>
             </thead>
             <tbody>
 
-                @foreach ($articles as $item)
+                @foreach ($users as $item)
                 <tr>
-                    <td>{{$item->id}}</td>
-                    <td>
-                        {{$item->title}}
+                    <td>{{$item['id']}}</td>
+                    <td>{{$item['name']}}
+                        
                         <p class="options"><a href={{"/dashboard/edit/".$item['id']}}>Edit</a> <a href={{"/dashboard/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">liste</a></p>
                     </td>
-                    <td>{{$item->category->title}}</td>
-                    <td>{{$item->author->name}}</td>
+                    <td>{{$item['email']}}</td>
                     <td>{{$item['created_at']}}</td>
+                    <td>X</td>
                 </tr>
                 @endforeach
                 
             </tbody>
             <tfoot>
                 <tr>
-                    <th scope="col"># Id</th>
-                    <th scope="col">Title</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Author</th>
-                    <th scope="col">Created At</th>
+                    <th>User_id</th>
+                    <th>User_name</th>
+                    <th>User_email</th>
+                    <th>Created_at</th>
+                    <th>Number of post</th>
                 </tr>
             </tfoot>
         </table>
@@ -81,4 +67,5 @@
       });
     });
 </script>
+
 @stop
