@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text("content");
             $table->string("thumbnail");
             $table->integer("category_id");
+            $table->integer("author_id");
             $table->timestamps();
             $table->softDeletes();
         });

@@ -20,7 +20,7 @@ class AuthController extends Controller
             'email'=>$request->email,
             'password'=>$request->password,
             //'is_admin' => 1
-        ],$request->password);
+        ]);
 
         if($admin_validate){
             return redirect()->route('dashboard');
@@ -28,8 +28,6 @@ class AuthController extends Controller
             return redirect()->back()->with('error', 'Invalid credential try again!!');
         }
 
-
-        //return $request -> input();
     }
 
     public function logout(){

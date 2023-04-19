@@ -39,7 +39,7 @@
                     </td>
                     <td>{{$item['email']}}</td>
                     <td>{{$item['created_at']}}</td>
-                    <td>X</td>
+                    <td> {{$item-> articles()->count()}}</td>
                 </tr>
                 @endforeach
                 

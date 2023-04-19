@@ -120,7 +120,7 @@ class ArticleController extends Controller
         }else{
             
             $data = [];
-            $data['articles'] = Article::where('author_id', '=', auth()->user()->id);
+            $data['articles'] = Article::where('author_id', '=', auth()->user()->id)->get();
             
             return view('dashboard/articles/article_list',$data);
         }

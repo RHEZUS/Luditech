@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Article;
 
 class ProfileController extends Controller
 {
@@ -116,6 +117,8 @@ class ProfileController extends Controller
         $data = [];
 
         $data['users'] = User::all();
+
+       
 
         return view('/dashboard/profile/profile_list', $data);
     }
