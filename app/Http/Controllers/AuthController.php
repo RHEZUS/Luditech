@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// one minute please
+
 class AuthController extends Controller
 {
     public function getLogin(){

@@ -87,14 +87,14 @@ class ProfileController extends Controller
 
         if ($request->hasFile('picture')) {
 
-            $file = $request->file;
+
+            $file = $request->picture;
 
             $fileName =time(). '.' .$file->clientExtension();
 
             $file->storeAs('public/profile_pictures', $fileName);
 
-        
-            $data -> profile_picture = $fileName;
+            $data->profile_picture = $fileName;
         }
 
         if (isset($request->password)) {
@@ -117,8 +117,6 @@ class ProfileController extends Controller
         $data = [];
 
         $data['users'] = User::all();
-
-       
 
         return view('/dashboard/profile/profile_list', $data);
     }

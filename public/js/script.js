@@ -47,7 +47,7 @@ ClassicEditor
     .create( document.querySelector( '#content' ) )
     .catch( error => {
         console.error( error );
-    } );
+    });
 
 var new_cat = document.getElementById('category');
 

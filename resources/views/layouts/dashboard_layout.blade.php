@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="{{asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
 
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
 </head>
 
 <body>
@@ -68,6 +70,44 @@
                     </div>
                 </div>
 
+                <div class="item-1 my-3" style="{{$current_route  == 'product_form' || $current_route  == 'product_list' || $current_route  == 'cause-edit' ? 'background-color: #695cfe; color: white;' : ''}}">
+                    <button class="btn item-1-elt dropdown-toggle shadow-none"  style="border: none; {{$current_route  == 'product_form' || $current_route  == 'product_list' || $current_route  == 'cause-edit' ? 'background-color: #695cfe; color: white;' : ''}}" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class='bx bxl-shopify  fs-4 me-3'></i><span>Products</span> 
+                    </button>
+                    <div class="dropdown-menu border-0 w-100"  aria-labelledby="triggerId">
+                    <a class="dropdown-item" href="{{route("product_form")}}">Add New</a>
+                    <a class="dropdown-item " href="{{route('product_list')}}">All Products</a>
+                    <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </div>
+
+                
+                <div class="item-1 my-3"  style="{{$current_route  == 'eventForm' || $current_route  == 'event_list' || $current_route  == 'cause-edit' ? 'background-color: #695cfe; color: white;' : ''}}">
+                    <button class="btn item-1-elt dropdown-toggle shadow-none"  style="border: none; {{$current_route  == 'eventForm' || $current_route  == 'event_list' || $current_route  == 'cause-edit' ? 'background-color: #695cfe; color: white;' : ''}}" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class='bx bx-calendar fs-4 me-3' ></i> <span>Events</span> 
+                        </button>
+                    <div class="dropdown-menu border-0 w-100"  aria-labelledby="triggerId">
+                        <a class="dropdown-item" href="{{route("eventForm")}}">Add New</a>
+                        <a class="dropdown-item " href="{{route('event_list')}}">All Events</a>
+                        <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </div>
+
+
+                <div class="item-1 my-3"  style="{{$current_route  == 'cause_form' || $current_route  == 'cause-list' || $current_route  == 'cause-edit' ? 'background-color: #695cfe; color: white;' : ''}}">
+                    <button class="btn item-1-elt dropdown-toggle shadow-none"  style="border: none; {{$current_route  == 'cause_form' || $current_route  == 'cause-list' || $current_route  == 'cause-edit' ? 'background-color: #695cfe; color: white;' : ''}}" style="border: none;" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class='bx bxs-donate-heart  fs-4 me-3'></i><span>Causes</span> 
+                    </button>
+                    <div class="dropdown-menu border-0 w-100"  aria-labelledby="triggerId">
+                        <a class="dropdown-item" href="{{route("cause_form")}}">Add New</a>
+                        <a class="dropdown-item " href="{{route('cause-list')}}">All Causes</a>
+                        <a class="dropdown-item" href="#">Action</a>
+                    </div>
+                </div>
+
                 <?php 
                 
                     if (auth()->user()->is_admin) {
@@ -89,18 +129,6 @@
                 <?php 
                     }
                 ?>
-        
-                <div class="item-1 my-3">
-                    <button class="btn item-1-elt dropdown-toggle shadow-none" style="border: none;" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <i class='bx bx-clipboard fs-4 me-3' ></i><span>Training</span> 
-                        </button>
-                    <div class="dropdown-menu border-0 w-100"  aria-labelledby="triggerId">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item " href="#">Disabled action</a>
-                    <a class="dropdown-item" href="#">Action</a>
-                    </div>
-                </div>
         
                 <div class="item-1 my-3 py-2">
                     <a href="#" class="item-1-elt shadow-none mx-3 py-1" style="border: none;" >
@@ -184,10 +212,6 @@
     <script src="{{asset('assets/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
     <script src="{{asset('assets/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
     <script src="{{asset('assets/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
-    
-    <!-- AdminLTE App -->
-    <script src="{{asset('assets/dist/js/adminlte.min.js')}} "></script>
-    
 
  </body>
 

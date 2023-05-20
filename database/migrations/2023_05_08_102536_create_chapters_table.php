@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('trainings', function (Blueprint $table) {
+        Schema::create('chapters', function (Blueprint $table) {
             $table->id();
+            $table->integer("training_id");
             $table->string("title");
-            $table->string("description");
-            $table->string("thumbnail");
-            $table->integer("author_id");
-            $table->integer("views")->default(0);
-            $table->boolean("released")->default(false);
+            $table->string("content");
             $table->timestamps();
             $table->softDeletes();
         });
@@ -29,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('trainings');
+        Schema::dropIfExists('chapters');
     }
 };

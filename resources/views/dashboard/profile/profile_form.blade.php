@@ -34,7 +34,6 @@
                     <img id="blah" class="" src="{{isset($users->id) ? asset('/storage/profile_pictures/'.$users->profile_picture) : asset('images/image-placeholder.png')}}" alt="your image" />
         
                 </div>
-
                 <div class="mb-3 image text-center">
                     <label class="imgInp mx-auto px-1 py-2 my-2 text-light rounded" style="background-color: #695cfe;" for="imgInp">Choose file</label><br>
                     <input type="file" style="visibility: hidden;" name="picture" id="imgInp" >

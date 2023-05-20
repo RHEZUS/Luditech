@@ -11,16 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('trainings', function (Blueprint $table) {
+        Schema::create('causes', function (Blueprint $table) {
             $table->id();
             $table->string("title");
-            $table->string("description");
+            $table->dateTime('date');
+            $table->integer("exp_donation");
+            $table->integer("actual_donation")->default(0);
+            $table->text("description");
             $table->string("thumbnail");
+            $table->integer("category_id")->default(NULL);
             $table->integer("author_id");
-            $table->integer("views")->default(0);
-            $table->boolean("released")->default(false);
-            $table->timestamps();
             $table->softDeletes();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('trainings');
+        Schema::dropIfExists('causes');
     }
 };

@@ -246,3 +246,53 @@ tr:hover .options{
 .preview-image-profile img{
     border-radius: 50%;
 }
+
+
+/* -- Website navbar -- */
+.webs-menu{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+
+
+/* -- Website footer -- */
+.category-list li{
+    padding: 12px 0px;
+    justify-content: space-between;
+    border-bottom: 1px solid #303945;
+}
+/* -- Website footer -- */
+
+.img-preview{
+    position: relative;
+    z-index: 0;
+}
+.img-preview a{
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    visibility: hidden;
+    z-index: 3;
+    text-decoration: none;
+    color: white;
+    padding: 1px 3px;
+    border-radius: 50%;
+    background-color: black;
+}
+.img-preview:hover a{
+    visibility: visible;
+}
+
+.img-preview:hover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
+    position: absolute;
+    z-index: 2;
+}

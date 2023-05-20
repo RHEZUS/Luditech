@@ -20,7 +20,7 @@
 
 <div class="card mx-3 my-3 p-2 bg-white">
     <div class="card-header">
-        <h3 class="card-title">List of Articles <span><a href="{{route('create_article')}}" class="btn btn-primary mx-3">Add New</a></span></h3>
+        <h3 class="card-title">List of Products <span><a href="{{route("product_form")}}" class="btn btn-primary mx-3">Add New</a></span></h3>
     </div>
     <!-- /.card-header -->
     <div class="card-body">
@@ -28,7 +28,8 @@
             <thead>
                 <tr>
                     <th scope="col"># Id</th>
-                    <th scope="col">Title</th>
+                    <th scope="col">name</th>
+                    <th scope="col">Date</th>
                     <th scope="col">Category</th>
                     <th scope="col">Author</th>
                     <th scope="col">Created At</th>
@@ -36,13 +37,14 @@
             </thead>
             <tbody>
 
-                @foreach ($articles as $item)
+                @foreach ($product as $item)
                 <tr>
                     <td>{{$item->id}}</td>
                     <td>
-                        {{$item->title}}
-                        <p class="options"><a href={{"/dashboard/edit/".$item['id']}}>Edit</a> <a href={{"/dashboard/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">liste</a></p>
+                        {{$item->name}}
+                        <p class="options"><a href={{"/dashboard/products/edit/".$item['id']}}>Edit</a> <a href={{"/dashboard/products/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">liste</a></p>
                     </td>
+                    <td>{{$item->date}}</td>
                     <td>{{$item->category->title}}</td>
                     <td>{{$item->author->name}}</td>
                     <td>{{$item['created_at']}}</td>
@@ -54,6 +56,7 @@
                 <tr>
                     <th scope="col"># Id</th>
                     <th scope="col">Title</th>
+                    <th scope="col">Date</th>
                     <th scope="col">Category</th>
                     <th scope="col">Author</th>
                     <th scope="col">Created At</th>
