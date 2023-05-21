@@ -32,6 +32,9 @@ class ArticleController extends Controller
             'slug'=>'required',
             'content'=> 'required',
             'thumbnail'=>'required',
+            'category'=>'required',
+            'description'=>'required',
+            'new_category'=>'required_if:category,==,new'
         ]);
 
         
@@ -68,6 +71,7 @@ class ArticleController extends Controller
             $article->title=$request->input('title');
             $article->slug=$request->input('slug');
             $article->content=$request->input('content');
+            $article->desc=$request->input('description');
             $article->thumbnail=$fileName;
             $article->category_id=$category_id;
             $article->author_id=auth()->user()->id;
@@ -158,6 +162,9 @@ class ArticleController extends Controller
             'title'=>'required',
             'slug'=>'required',
             'content'=> 'required',
+            'category'=>'required',
+            'description'=>'required',
+            'new_category'=>'required_if:category,==,new'
         ]);
 
 
@@ -189,6 +196,7 @@ class ArticleController extends Controller
         $data -> title = $request ->title;
         $data->slug=$request->input('slug');
         $data->content=$request->input('content');
+        $data->desc=$request->input('description');
         $data->category_id=$category_id;
 
         # delate all the existing tags which are related to the article to set the new ones.

@@ -120,6 +120,6 @@ Route::post('dashboard/login', [AuthController::class, 'login'])->name('postLogi
 
 Auth::routes(); 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/blog',[BlogController::class,'getBlog'])->name('blog');

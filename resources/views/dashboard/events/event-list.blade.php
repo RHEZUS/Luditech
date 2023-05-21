@@ -42,7 +42,7 @@
                     <td>{{$item->id}}</td>
                     <td>
                         {{$item->title}}
-                        <p class="options"><a href={{"event/edit/".$item['id']}}>Edit</a> <a href={{"event/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">liste</a></p>
+                        <p class="options"><a href={{"event/edit/".$item['id']}}>Edit</a> <a href={{"event/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">Detail</a></p>
                     </td>
                     <td>{{$item->date}}</td>
                     <td>{{$item->category->title}}</td>

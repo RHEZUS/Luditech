@@ -18,6 +18,10 @@ class DashboardAuth
         if (!auth()->check()) {
             
             return redirect()->route('getLogin')->with('error', 'You should log in first !!');
+        }else{
+            if (!auth()->user()->role =='ADMIN') {
+                return redirect()->route('getLogin')->with('error', 'You are not an admin !!');
+            }
         }
         return $next($request);
     }

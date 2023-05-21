@@ -31,10 +31,15 @@
                     <input type="text" name="slug" value="{{(isset($article) ? $article->slug : '') }}" id="slug" class="form-control" placeholder="Slug autofill..."> 
                 </div>
                 <div class="mb-3">
+                    <label for="content" class="form-label">Post Description</label> <br>
+                    <textarea   name="description" type="text" style="width: 100%"  placeholder="Description">{{ old('content') ?? (isset($article) ? $article->desc : '') }}</textarea>          
+                </div>
+                <div class="mb-3">
                     <label for="content" class="form-label">Post Content</label>
                     <textarea id="content"  name="content" type="text" placeholder="Content">{{ old('content') ?? (isset($article) ? $article->content : '') }}</textarea>
                             
                 </div>
+                
             </div>
         
             <div class="col-lg-4">
@@ -43,7 +48,7 @@
                     <select class="form-select form-select-lg fs-6" name="category" id="category">
                         <option selected>Select one</option>
                         @foreach($category as $item)
-                        <option value="{{$item['id']}}" {{(isset($article) && $item['id']= $article->category_id ? 'selected="selected"' : '') }} class="">{{$item['title']}}</option>
+                        <option value="{{$item['id']}}" {{(isset($article) && $item['id']== $article->category_id ? 'selected="selected"' : '') }} class="">{{$item['title']}}</option>
                         @endforeach
                         <option value="new">New</option>
                     </select>
@@ -81,7 +86,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="tags-input" class="form-label">Post lable</label>
+                    <label for="tags-input" class="form-label">Post lables</label>
                     <div class="tag-contain">
 
                         <input type =" text" name ="tags" id="tags-input" placeholder="Type your tag here ..." value="{{(isset($article) ? $tags : '') }}">

@@ -29,9 +29,9 @@
                 <tr>
                     <th scope="col"># Id</th>
                     <th scope="col">name</th>
-                    <th scope="col">Date</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
                     <th scope="col">Category</th>
-                    <th scope="col">Author</th>
                     <th scope="col">Created At</th>
                 </tr>
             </thead>
@@ -42,11 +42,11 @@
                     <td>{{$item->id}}</td>
                     <td>
                         {{$item->name}}
-                        <p class="options"><a href={{"/dashboard/products/edit/".$item['id']}}>Edit</a> <a href={{"/dashboard/products/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">liste</a></p>
+                        <p class="options"><a href={{"/dashboard/products/edit/".$item['id']}}>Edit</a> <a href={{"/dashboard/products/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">Detail</a></p>
                     </td>
-                    <td>{{$item->date}}</td>
-                    <td>{{$item->category->title}}</td>
-                    <td>{{$item->author->name}}</td>
+                    <td>{{$item->quantity}}</td>
+                    <td>{{$item->price}}</td>
+                    <td>{{$item->category->name}}</td>
                     <td>{{$item['created_at']}}</td>
                 </tr>
                 @endforeach
@@ -55,7 +55,7 @@
             <tfoot>
                 <tr>
                     <th scope="col"># Id</th>
-                    <th scope="col">Title</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Date</th>
                     <th scope="col">Category</th>
                     <th scope="col">Author</th>

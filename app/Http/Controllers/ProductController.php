@@ -27,6 +27,8 @@ class ProductController extends Controller
             'images.*' => 'mimes:jpeg,jpg,png',
             'category'=>'required',
             'thumbnail'=>'required',
+            'new_category'=>'required_if:category,==,new',
+            'new_category_desc'=>'required_if:category,==,new',
         ]);
 
         if ($request->hasFile('thumbnail')) {  
@@ -39,11 +41,6 @@ class ProductController extends Controller
             $category_id = null;
 
             if (isset($request->new_category)) {
-
-                $request->validate([
-                    'new_category'=>'required',
-                    'new_category_desc'=>'required'
-                ]);
 
                 #check if the new_category field is set, if true, create a new category
 
@@ -86,7 +83,7 @@ class ProductController extends Controller
             }
 
             if ($image_data){
-                return redirect()->route('product_form')->with('success', 'Created successfully!!');
+                return redirect()->route('product_list')->with('success', 'Created successfully!!');
             }
             else{
                 return redirect()->route('product_form')->with('error', 'A problem accured!!');
@@ -118,6 +115,8 @@ class ProductController extends Controller
             'description'=>'required',
             'images.*' => 'mimes:jpeg,jpg,png',
             'category'=>'required',
+            'new_category'=>'required_if:category,==,new',
+            'new_category_desc'=>'required_if:category,==,new',
         ]);
         
         $data = Product::find($request->id);
@@ -135,11 +134,7 @@ class ProductController extends Controller
 
         if (isset($request->new_category)) {
 
-            $request->validate([
-                'new_category'=>'required',
-                'new_category_desc'=>'required'
-            ]);
-
+        
             #check if the new_category field is set, if true, create a new category
 
             $category = ProductCategory::create([
@@ -172,7 +167,7 @@ class ProductController extends Controller
                 $fileName = time() . '.' . $file->clientExtension();
                 $file->storeAs( 'public/productImages', $fileName);
 
-                $image_data = productImage::create([
+                productImage::create([
                     'image_name'=>$fileName,
                     'product_id'=>$product_id
                 ]);
@@ -180,7 +175,7 @@ class ProductController extends Controller
         }
 
         if ($data){
-            return redirect()->route('product_list')->with('success', 'Created successfully!!');
+            return redirect()->route('product_list')->with('success', 'Updated successfully!!');
         }
         else{
             return redirect()->back()->with('error', 'A problem accured!!');

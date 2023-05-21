@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Article;
+use Nette\Schema\Elements\Structure;
 
 class ProfileController extends Controller
 {
     //
 
     public function get_page(){
-
-        return view('dashboard/profile/profile_form');
+        $data =[];
+        $data ['role']= User::distinct()->get('role');
+        return view('dashboard/profile/profile_form',$data);
 
     }
     public function create(Request $request){
@@ -47,13 +49,13 @@ class ProfileController extends Controller
                     'name' => $request -> username,
                     'email' => $request -> email,
                     'password' => $request ->password,
-                    'is_admin' => $request -> role,
+                    'role' => strtoupper( $request -> role),
                     'profile_picture' => $fileName,
                 ]);
         
                 
                 if ($valid) {
-                    return redirect() -> back() ->with('success', 'New user created successfully!!');
+                    return redirect() -> route('list_profile') ->with('success', 'New user created successfully!!');
                 }else{
                     return redirect() -> back() ->with('error', 'There was a problem check again!!');
                 }

@@ -110,7 +110,7 @@
 
                 <?php 
                 
-                    if (auth()->user()->is_admin) {
+                    if (auth()->user()->role=='ADMIN') {
                         # code...
                 ?>
 

@@ -41,7 +41,7 @@
                     <td>{{$item->id}}</td>
                     <td>
                         {{$item->title}}
-                        <p class="options"><a href={{"/dashboard/edit/".$item['id']}}>Edit</a> <a href={{"/dashboard/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">liste</a></p>
+                        <p class="options"><a href={{"/dashboard/edit/".$item['id']}}>Edit</a> <a href={{"/dashboard/delete/".$item['id']}} class="text-danger">Delete</a> <a href="#">Detail</a></p>
                     </td>
                     <td>{{$item->category->title}}</td>
                     <td>{{$item->author->name}}</td>

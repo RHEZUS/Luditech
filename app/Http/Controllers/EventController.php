@@ -21,6 +21,7 @@ class EventController extends Controller
             'description'=>'required',
             'category'=>'required',
             'thumbnail'=>'required',
+            'new_category'=>'required_if:category,==,new',
         ]);
         
         if ($request->hasFile('thumbnail')) {  
@@ -56,7 +57,7 @@ class EventController extends Controller
             ]);
 
             if ($data){
-                return redirect()->route('eventForm')->with('success', 'Created successfully!!');
+                return redirect()->route('event_list')->with('success', 'Created successfully!!');
             }
             else{
                 return redirect()->route('eventForm')->with('error', 'A problem accured!!');
@@ -88,6 +89,7 @@ class EventController extends Controller
             'location'=>'required',
             'description'=>'required',
             'category'=>'required',
+            'new_category'=>'required_if:category,==,new',
         ]);
 
         $category_id = NULL;

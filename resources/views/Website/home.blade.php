@@ -1,22 +1,179 @@
-@extends('../layouts.website_layout')
-@section('navbar')
+<!doctype html>
+<html lang="en">
 
-@section('content')
+<head>
+    <title>Luditech</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div class="my-5">
-    <div class="first-elt" style="">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore sequi dolor commodi dolorem officiis, pariatur ducimus ut quidem praesentium nostrum officia architecto deleniti, aspernatur similique error! Voluptas labore eos impedit molestias a sequi recusandae hic pariatur facere voluptate, corrupti velit! Amet ex inventore iure corporis dolor libero ullam voluptatibus ipsum provident saepe quae recusandae blanditiis, incidunt voluptate nisi, dicta odit vel quis? Pariatur ab dolores, commodi aspernatur optio unde porro labore totam officiis sunt nostrum quo tempore dicta ad magni! Sit quo, soluta excepturi velit, quasi iure commodi sed facere iusto placeat neque consectetur, maiores ab! Fugit nihil dolores doloremque deserunt, ex velit voluptatem tempore expedita accusamus rem consequatur praesentium sapiente quasi consectetur quis! Nostrum nemo, veniam iste quia eum eos facere vitae adipisci doloremque a quas voluptatum, nesciunt aliquam! Quia accusantium dolores, aspernatur iste repellat nisi ex illo ratione eum officia, error veritatis, unde neque laudantium! Sint, quos pariatur laborum sapiente qui porro doloribus dolore. Neque nesciunt fuga aut sapiente, quia possimus libero dolores ea placeat praesentium exercitationem quo asperiores sint ducimus molestias! Veritatis voluptate eveniet vero. Blanditiis magnam libero nisi tenetur sequi illum. Adipisci eius similique, ipsa, magni voluptatibus vitae, minima recusandae earum laboriosam iure eveniet! Distinctio voluptas, vel sapiente aliquam inventore illum, nihil sit dolore repellat excepturi necessitatibus eveniet dolor consequuntur nobis earum perspiciatis quia laboriosam natus vitae ad magnam dignissimos placeat? Laboriosam expedita voluptatum voluptatem corporis possimus temporibus, atque iure totam non consectetur sunt natus exercitationem ullam illo, eos culpa quasi animi ratione consequuntur laborum. Cupiditate amet voluptates excepturi rerum reiciendis magnam dolorum nihil eum laudantium? Inventore ducimus porro animi perspiciatis laboriosam, ipsa in deleniti ab enim beatae veritatis a accusantium earum, quo accusamus quasi rerum! Quibusdam distinctio suscipit harum aspernatur. Iure ab dignissimos, nulla minus, expedita aliquid architecto error, enim earum sed maiores maxime inventore suscipit eum recusandae itaque officia illo a excepturi illum. Odio repellat sunt officia exercitationem laborum temporibus est unde voluptate facilis fuga sed vitae autem, necessitatibus doloremque deserunt quam ut nobis sit ad eligendi accusantium labore aliquid ea impedit. Est, voluptatum eius nulla dolorum, alias expedita architecto, velit quia dicta ab iure impedit? Illum quo quae laudantium provident, nobis tempore necessitatibus voluptates? Odit, consequatur illum? Earum obcaecati numquam expedita neque ratione eaque ullam aut ipsam est voluptas. Necessitatibus, mollitia similique quia magnam est, tempore repellendus voluptatibus incidunt aspernatur iure placeat, porro quibusdam laborum. Ad vitae tempore accusamus delectus voluptate dolorem laboriosam. In voluptate sunt facere itaque, quia unde, numquam nesciunt repellat voluptatem quibusdam cupiditate, a animi earum optio architecto. Error aperiam officiis maiores, ratione, adipisci molestiae assumenda necessitatibus dolorem deleniti magnam, ducimus nemo obcaecati aliquam vel nesciunt facere fugiat odit autem! Sint cum odio tempore asperiores adipisci, possimus vero debitis nesciunt aut ipsa ipsam dignissimos suscipit neque non est aperiam eos maiores cumque saepe perferendis explicabo fugit voluptatibus impedit minus? Rerum eum amet quo, eos numquam in corrupti velit quidem dicta eligendi perspiciatis atque molestias illum earum id itaque. Est voluptates, sequi perspiciatis repellendus velit pariatur dolor optio omnis consequuntur illo? Fugiat aliquam commodi expedita a quod suscipit ipsa iusto possimus quo aspernatur ipsum sit reprehenderit provident illo dolore fuga eligendi at ad magnam, error tenetur debitis nihil est! Similique architecto nulla esse aliquid facilis. Quibusdam totam eum sunt ducimus! Tempora accusantium nobis facilis error! Saepe, sequi a quaerat incidunt placeat quos alias vero, assumenda omnis pariatur reiciendis consectetur numquam maxime excepturi nihil modi in tenetur asperiores illum! Cum, autem debitis maiores aperiam obcaecati consequatur placeat neque ex perferendis amet ipsa! Sint explicabo, non fugiat minus ab magnam, a at maiores tenetur facere saepe fuga rerum repellat culpa. Laudantium quidem laborum voluptate, quibusdam ratione cumque, doloremque autem suscipit nihil dolorum libero, vitae dolorem cum quas recusandae ipsam culpa necessitatibus pariatur! Aspernatur corporis temporibus amet, tempora eos doloremque nesciunt facere. Modi distinctio sunt amet dolore assumenda nulla tempora expedita earum excepturi velit tempore nam numquam ducimus dolor, possimus, quisquam eveniet recusandae odio quaerat consectetur repellendus quod! Cumque suscipit magnam minima recusandae expedita soluta aspernatur praesentium odio eos perspiciatis accusantium, laboriosam fugiat. Aperiam esse autem aut dignissimos eius hic perspiciatis quas officiis nihil, itaque sequi consectetur pariatur impedit eligendi repellendus eos? Reiciendis necessitatibus nihil facere suscipit aut vel iure iusto ut itaque molestias aliquid doloremque optio corporis amet, vitae quos explicabo praesentium corrupti eveniet aperiam! Ad inventore eos ducimus, excepturi quos quisquam suscipit perferendis obcaecati iste laboriosam. Quam laborum assumenda nam quae nihil animi, nisi error placeat pariatur, totam molestias perspiciatis. Officiis consequatur exercitationem placeat reiciendis nam laborum dolore repellendus quam similique at deserunt a saepe, perspiciatis amet est itaque quae nihil? Veniam recusandae, ut maxime tempora et culpa error? Quas dicta eveniet omnis totam. Provident voluptates dolorum nesciunt ullam, nobis eligendi error. Unde, fugiat enim dignissimos quam voluptatem fugit tenetur explicabo? Officia quo provident iusto, labore cumque corrupti repellat eum necessitatibus sapiente sequi? Expedita alias nobis explicabo officia. Veniam illum consectetur rerum vero, ad adipisci vitae ullam perspiciatis cumque qui, dolor cum sunt quod magni temporibus laborum rem animi! Praesentium quasi ipsa dolor molestias ipsum sint incidunt beatae laudantium ea est. Similique vitae eos quo doloremque quae adipisci repellat laboriosam explicabo. Magnam molestias ipsam perspiciatis, eum atque fugiat. Debitis quisquam atque accusamus! Rerum reiciendis explicabo nemo similique ipsa hic. Ipsam inventore dolorem nemo vero excepturi earum rerum cupiditate libero veniam veritatis quaerat dicta ipsa id repudiandae accusamus atque dolorum, blanditiis, itaque aspernatur debitis. Molestias adipisci porro nisi, suscipit, necessitatibus ipsum vero repellat commodi nemo, deleniti nesciunt dolorum asperiores delectus facilis quaerat culpa ad quam expedita. At inventore consectetur dolor. Earum quibusdam voluptatibus harum autem, obcaecati nisi inventore, ducimus temporibus debitis expedita qui quo blanditiis libero consequatur fugit! Repellendus alias amet dolorum earum blanditiis officiis enim iure illum eveniet unde tempore autem aliquam, placeat laboriosam voluptas quasi. Consequatur doloremque excepturi voluptates nam quidem facilis aliquam voluptatibus, cupiditate dolorum rerum similique veritatis! Aut harum nulla assumenda earum nisi, magnam ratione hic a reprehenderit rem deserunt pariatur esse, voluptatum sunt voluptates alias natus debitis, totam vel cumque obcaecati! Quaerat, excepturi recusandae corrupti porro doloremque voluptas.
-    </div>
-    
-</div>
-@endsection
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-@section('sidebar')
-    
-@endsection
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <x-header></x-header>
+    </header>
+    <main>
+        <div class="homepage-section-1 m-0 p-0" style="border: 1px solid black;">
+
+            <div class="container-fluid m-0 p-0"  style="margin-top: 300px;">
+                <div id="carouselId" class="carousel slide" data-bs-ride="carousel" >
+                    <ol class="carousel-indicators" style="z-index: 10;">
+                        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="w-100 d-block" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block" style="top:170px; z-index: 10;">
+                                <h1 >Title</h1>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1643321611132-15f7b8a63347?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="w-100 d-block" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block"  style="top:170px; z-index: 10;">
+                                <h1>Title</h1>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1473649085228-583485e6e4d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" class="w-100 d-block" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block"  style="top:170px; z-index: 10;">
+                                <h1>Title</h1>
+                                <p>Description</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button style="z-index: 10;">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button style="z-index: 10;">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="homepage-section-2 p-4 lastest-causes">
+            <div class="container">
+                <div class="section-title mx-auto">
+                    <h1 class="text-center"> Our causes </h1>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.  quidem suscipit aperiam ad excepturi beatae possimus! </p>
+                    
+                </div>
+                
+                <div class="row">
+
+                    @foreach ($causes as $cause)
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ asset('storage/thumbnails/'.$cause->thumbnail)}}" alt="Title" style="width: 100%; height: 200px; border-bottom: 1px solid darkgrey;">
+                            <div class="card-body px-2">
+                                
+                                <div class="donation-progress py-2">
+                                    <div class="infos m-0 p-0">
+                                        <h1 class="text-center"> {{$cause->title}} </h1>
+                                        <p class="text-center">{{$cause->description}}</p>
+                        
+                                    </div>
+                                    
+                                    <h5 class="card-title py-0">{{($cause->actual_donation * 100) /($cause->exp_donation)}} %</h5>
+                                    <p class="progressbar"><span style="width: {{($cause->actual_donation * 100) /($cause->exp_donation).'%'}};"></span></p>
+                                </div>
+                                
+                                <button class="btn btn-primary">Donate Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                    
+                </div>
+            </div>
+            
+        </div>
+
+
+        <div class="homepage-section-3 p-4 our-values">
+            <div class="container py-4">
+                <div class="section-title mx-auto mb-4" style="position: relative; z-index: 1;">
+                    <h1 class="text-center text-white"> Our Values </h1>
+                    <p class="text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.  quidem suscipit aperiam ad excepturi beatae possimus! </p>
+                    
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card p-2 value">
+                            <div class="card-body">
+                                <i class='bx bx-heart fs-2 my-2 mx-auto'></i>
+                                <h3>Love</h3>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, consequatur totam laboriosam?</p>
+                            
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="homepage-section-4 p-4 lastest-post">
+            <div class="container">
+                <div class="section-title mx-auto">
+                    <h1 class="text-center"> Our causes </h1>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.  quidem suscipit aperiam ad excepturi beatae possimus! </p>
+                    
+                </div>
+                
+                <div class="row">
+                    @foreach ($posts as $post)
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="{{ asset('storage/thumbnails/'.$post->thumbnail)}}" alt="Title" style="width: 100%; height: 220px; border-bottom:1px solid black;">
+                            <div class="card-body">
+                                <h4 class="card-title py-2">{{$post->title}}</h4>
+                                <p class="card-text">{{$post->desc}}</p>
+                                <p style="font-size: 13px">{{$post->updated_at->format('m/d/Y')}}</p>
+                            
+                                <button class="btn btn-primary">Read More</button>
+                            </div>
+                        </div>
+                    </div>  
+                    @endforeach
+                    
+                </div>
+            </div>
+            
+        </div>
 
 
 
+    </main>
+    <footer>
+        <x-footer></x-footer>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
 
-@section('footer')
+   
+</body>
+
+</html>

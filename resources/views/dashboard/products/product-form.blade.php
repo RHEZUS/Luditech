@@ -72,7 +72,7 @@
                                         @foreach ($product->images as $item)
                                             <div class="col-lg-3 img-preview">
                                                 <img src="{{asset('storage/productImages/'. $item->image_name)}}" alt="" style="width: 100%; height:100px">
-                                                <a href="{{"/dashboard/products/image/delete/".$item['id']}}"><i class='bx bx-x'></i></a>
+                                                <a href="{{"/dashboard/products/image/delete/".$item['id']}}"><i class='bx bxs-x-circle'></i></a>
                                             </div>
                                         @endforeach
                                             

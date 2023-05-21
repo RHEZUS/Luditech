@@ -22,7 +22,8 @@ class CauseController extends Controller
             'exp_donation'=>'required',
             'description'=>'required',
             'category'=>'required',
-            'thumbnail'=>'required'
+            'thumbnail'=>'required',
+            'new_category'=>'required_if:category,==,new',
         ]);
 
         if ($request->hasFile('thumbnail')) {  
@@ -87,6 +88,8 @@ class CauseController extends Controller
             'exp_donation'=>'required',
             'description'=>'required',
             'category'=>'required',
+            'thumbnail'=>'required',
+            'new_category'=>'required_if:category,==,new',
         ]);
 
         $category_id = NULL;

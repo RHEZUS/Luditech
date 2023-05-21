@@ -75,14 +75,17 @@
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
 
-            <div class="mb-5">
-                <label for="role" class="form-label">Role</label>
-                <select class="form-select form-select-lg fs-5" name="role" id="role">
-                    <option  {{isset($users->id) ? '' : 'selected'}}>Select one</option>
-                    <option value="1" {{isset($users->id) && $users->is_admin==1 ? 'selected' : ''}}>Admin</option>
-                    <option value="0"{{isset($users->id) && $users->is_admin==0 ? 'selected' : ''}}>Author</option>
-                </select>
+            <!-- Cartegory(role of the user)-->
+
+            <div class="category-select mb-3">
+
+                <label for="role" class="form-label">User role</label>
+                <div class="my-3">
+                    <input type="text" class="form-control" value="{{isset($users->id) ? $users->role : ''}}" name="role" placeholder="">
+                </div>
+
             </div>
+
             @error('role')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -94,14 +97,5 @@
     
     
 </form>
-<script>
-    $(document).ready(function() {
-        $('#title').on('keyup', function() {
-            var slug = $(this).val().toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
-            $('#slug').val(slug);
-        });
-
-    });
-</script>
 
 @stop

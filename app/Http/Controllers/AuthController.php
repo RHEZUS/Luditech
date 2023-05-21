@@ -21,7 +21,7 @@ class AuthController extends Controller
         $admin_validate = auth()->attempt([
             'email'=>$request->email,
             'password'=>$request->password,
-            //'is_admin' => 1
+            'role' => 'ADMIN'
         ]);
 
         if($admin_validate){
