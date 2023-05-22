@@ -15,6 +15,7 @@
                 <div class="col-md-6 col-xl-4 recent">
                     <h3 class="my-4">Recent Causes</h3>
                     <ul>
+                        
                         <li class="my-1" style="border-bottom: 1px solid white;"><a href="#">
                             <h5 >The first post's title</h5>
                             <span style="font-size: 10px;">12/05/2023</span>
