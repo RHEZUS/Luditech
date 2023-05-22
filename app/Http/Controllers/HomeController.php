@@ -28,7 +28,7 @@ class HomeController extends Controller
     {   
         $data =[];
         $data['posts'] = Article::all();
-        $data['causes'] = Cause::all()->last()->limit(3)->get();
+        $data['causes'] = Cause::all();
         return view('Website/home',$data);
     }
 }
