@@ -146,4 +146,9 @@ class CauseController extends Controller
             return redirect()->back()->with('error', 'A problem accured during Delete');
         }
     }
+    public function causes(){
+        $data = [];
+        $data['causes'] = Cause::all();
+        return view('Website.causes',$data);
+    }
 }

@@ -315,37 +315,92 @@ tr:hover .options{
 .homepage-section-1 .carousel .carousel-inner::before{
     content: '';
     width: 100%;
-    height: 100%;
+    height: 98%;
     position: absolute;
     background-color: rgba(0, 0, 255, 0.479);
     z-index: 1;
 }
 .homepage-section-1  .carousel img{
     width: 100%;
-    height: 80vh;
+    height: 68vh;
 }
 .carousel-caption{
     color: black;
 }
 
 /* Homepage causes*/
+.cause-container {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 
-.progressbar{
+.cause-container .cause-image{
+    height: 250px;
+    min-height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cause-container .cause-infos{
+    height: 180px;
+}
+.cause-container .cause-infos .percentage{
+    font-size: 26px;
+}
+.cause-container .cause-infos .progress-bar{
     width: 100%;
-    height: 10px;
-    background-color: darkgrey;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.cause-container .cause-infos .progress-bar p{
+    width: 100%;
+    height: 20px;
+    background-color: #565861;
     position: relative;
-    border-radius: 20px;
 }
-.progressbar span {
+.cause-container .cause-infos .progress-bar p span{
     height: 100%;
-    background-color: blue;
+    width: var(--percentage);
+    background-color: #5F5FFC;
     position: absolute;
-    border-radius: 20px;
+    left: 0;
+    animation: progressbar 1.8s;
+    
 }
-.donation-progress h6{
-    list-style: 10px;
+
+.cause-container .cause-infos .title{
+    height: 60px;
 }
+.cause-container .cause-infos .title h4{
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cause-container .learn-more a{
+    padding: 10px 15px;
+    text-decoration: none;
+    color: blue;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s, color .2s ease-in;
+    margin-left: auto;
+}
+.cause-container .learn-more a:hover{
+    background: blue;
+    color: #FFF;   
+}
+
+
+@keyframes progressbar{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: var(--percentage);
+    }
+}
+
 
 /*Homepage our values*/
 .our-values{
@@ -391,6 +446,61 @@ tr:hover .options{
     color: blue;
 }
 
+
+/*latest articles*/
+
+.article-container{
+    transition: 0.3s ease-in;
+    border: 1px solid darkgrey;
+}
+.article-container:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    border: none;
+}
+.article-container .article-image{
+    height: 250px;
+    min-height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.article-infos{
+    height: 200px;
+}
+.article-container .title{
+    height: 60px;
+}
+.article-container .title h4{
+    font-size: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.article-container .description{
+    height: calc(100%-100px);
+}
+.article-container .description p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #565861;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article-container .learn-more a{
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #565861;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s, color .2s ease-in;
+    margin-left: auto;
+}
+.article-container .learn-more a:hover{
+    color: blue;   
+}
+
+
 /* website footer*/
 
 
@@ -417,4 +527,26 @@ tr:hover .options{
 }
 .footer-section-2 .icons{
     font-size: 20px;
+}
+
+/*Blog */
+
+.page-title{
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    margin-top: 58px;
+    
+}
+.page-title::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #0912277e;
+    z-index: 1;
 }

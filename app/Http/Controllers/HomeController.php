@@ -27,8 +27,8 @@ class HomeController extends Controller
     public function index()
     {   
         $data =[];
-        $data['posts'] = Article::all();
-        $data['causes'] = Cause::all();
+        $data['posts'] = Article::orderBy('updated_at', 'desc')->take(3)->get();
+        $data['causes'] = Cause::orderBy('updated_at', 'desc')->take(3)->get();
         return view('Website/home',$data);
     }
 }

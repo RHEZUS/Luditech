@@ -145,4 +145,10 @@ class EventController extends Controller
             return redirect()->back()->with('error', 'A problem accured during Delete');
         }
     }
+
+    public function events(){
+        $data = [];
+        $data['causes'] = Event::all();
+        return view('Website.event',$data);
+    }
 }
