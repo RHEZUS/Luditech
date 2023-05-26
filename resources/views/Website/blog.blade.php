@@ -10,69 +10,55 @@
 </head>
 
 <body class="bg-white">
-  <header>
-    <x-header></x-header>
-  </header>
-  <main>
-    <div class="container-fluid blog-container p-0">
-      <div class="page-title d-flex align-items-center justify-content-center w-100" style="background: url('https://images.unsplash.com/photo-1571008592377-e362723e8998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');">
-              
-          <div class="position-relative" style="z-index: 5;">
-              <h1 class="text-center"> All Post </h1>
-              <p class="text-center">Home / Blog</p>
-          </div>
-              
-              
-      </div>
-      <div class="container my-5">
-          
-          <div class="content d-flex">
-              <div class="row py-3 content-elts w-100">
-                      
-                @foreach ($posts as $post)
+    <header>
+        <x-header></x-header>
+    </header>
+    <main>
+        <section class="homepage-section-4 p-4 latest-post">
+                
+            <h2>All Articles</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. </p>
+            
+            <div class="container">
+                
+                <div class="row">
+                    @foreach ($posts as $post)
 
 
-                <div class="col-sm-12 col-lg-6  col-xl-4  my-2">
-                    <div class="article-container w-100">
-                        <div class="article-image w-100" style="background-image: url('{{ asset('storage/thumbnails/'.$post->thumbnail)}}');"></div>
-                        <div class="body w-100 py-3" style="border-top: 1px solid darkgrey;">
-                            <div class="article-infos w-100 px-3">
-                                <div class="title d-flex align-items-center w-100">
-                                    <h4>{{$post->title}}</h4>
+                    <div class="col-md-4">
+                        <div class="article-container w-100">
+                            <div class="article-image w-100" style="background-image: url('{{ asset('storage/thumbnails/'.$post->thumbnail)}}');"></div>
+                            <div class="body w-100 py-3">
+                                <div class="article-infos w-100 px-3" style="border-top: 1px solid darkgrey;">
+                                    <div class="title d-flex align-items-center w-100">
+                                        <h4>{{$post->title}}</h4>
+                                    </div>
+                                    <div class="description d-flex align-items-center w-100">
+                                        <p> {{$post->desc}}</p>
+                                    </div>
+                                    <div class="details w-100">
+                                        <small class="d-flex align-items-center" style="height: 30px;"><span class="me-3">ON: {{$post->updated_at->format('m/d/Y')}}</span> <span>By: Ludivin</span></small>
+                                    </div>
                                 </div>
-                                <div class="description d-flex align-items-center w-100">
-                                    <p> {{$post->desc}}</p>
-                                </div>
-                                <div class="details w-100">
-                                    <small class="d-flex align-items-center" style="height: 30px;"><span class="me-3">ON: {{$post->updated_at->format('m/d/Y')}}</span> <span>By: Ludivin</span></small>
+                                <div class="learn-more w-100 text-end px-3">
+                                    <a href="#" >Read More...</a>
                                 </div>
                             </div>
-                            <div class="learn-more w-100 text-end px-3">
-                                <a href="#" >Read More...</a>
-                            </div>
+                                
                         </div>
-                            
-                    </div>
+                        
+                    </div>  
+                    @endforeach
                     
-                </div>  
-                @endforeach
-                  
-              </div>
-          </div>
-          
-          
-      </div>
-      
+                </div>
+            </div>
+            
+        </section>
 
-
-
-
-
-  </div>
-  </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
+    </main>
+    <footer>
+        <x-footer></x-footer>
+    </footer>
 </body>
 
 </html>

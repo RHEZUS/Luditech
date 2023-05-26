@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Luditech Causes</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,67 +14,38 @@
     <x-header></x-header>
   </header>
   <main>
-    <div class="container-fluid blog-container p-0">
-      <div class="page-title d-flex align-items-center justify-content-center w-100" style="background: url('https://images.unsplash.com/photo-1571008592377-e362723e8998?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');">
-              
-          <div class="position-relative" style="z-index: 5;">
-              <h1 class="text-center"> All Causes </h1>
-              <p class="text-center">Home / Blog</p>
-          </div>
-              
-              
-      </div>
-      <div class="container my-5">
-          
-          <div class="content d-flex">
-              <div class="row py-3 content-elts w-100">
-                      
+    <section class="our_cuauses" style="margin-top: 100px">
+        <h2>OUR CAUSES</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. </p>
+        <div class="container-fluid container-lg my-4" >
+            <div class="row  w-100  m-0">
                 @foreach ($causes as $cause)
-
-                    <div class="col-md-4">
-
-                        <div class="cause-container w-100 rounded bg-light">
-                            <div class="cause-image w-100" style="background-image: url('{{ asset('storage/thumbnails/'.$cause->thumbnail)}}');"></div>
-                            <div class="body w-100 py-3" style="border-top: 1px solid darkgrey;">
-                                <div class="cause-infos w-100 px-3">
-                                    <div class="percentage d-flex align-items-center w-100">
-                                        <h4>{{($cause->actual_donation * 100) /($cause->exp_donation)}} %</h4>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <p><span style="--percentage:{{($cause->actual_donation * 100) /($cause->exp_donation).'%'}};"></span></p>
-                                    </div>
-                                    <div class="title d-flex align-items-center w-100">
-                                        <h4> {{$cause->title}} </h4>
-                                    </div>
-
-                                    <div class="details w-100">
-                                        <small class="d-flex align-items-center" style="height: 30px;">Donatetion Collected {{'$'.$cause->actual_donation . ' '}} of {{'$'. $cause->exp_donation.' '}}</small>
-                                    </div>
+                <div class="col-xs-12 col-sm-6 col-lg-4  px-2">
+                    <div class="container-fluid item p-0">
+                        <img src="{{ asset('storage/thumbnails/'.$cause->thumbnail)}}" alt="">
+                        <div class="details">
+                            <h2>{{$cause->title}}</h2>
+                            <p style="height: 210px;">{{$cause->description}}</p>
+                            <div class="progress-text">
+                                <p class="progress-top" style="--width:{{($cause->actual_donation * 100) /($cause->exp_donation).'%'}};">{{($cause->actual_donation * 100) /($cause->exp_donation)}} %</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:{{($cause->actual_donation * 100) /($cause->exp_donation).'%'}};"></div>
                                 </div>
-                                <div class="learn-more w-100 text-end px-3">
-                                    <a href="#" >Donate now</a>
-                                </div>
+                                <p class="progress-left">Raised: <span>{{'$'.$cause->actual_donation}}</span></p>
+                                <p class="progress-right">Goal: <span>{{'$'. $cause->exp_donation}}</span></p>
                             </div>
-                                
+                            <h2 class="borderes" style="padding-top: 10px;"><a href="#">DONATE NOW</a></h2>
                         </div>
                     </div>
-                    @endforeach
-                  
-              </div>
-          </div>
-          
-          
-      </div>
-      
-
-
-
-
-
-  </div>
+                    
+                </div>
+                @endforeach    
+            </div>
+        </div>
+    </section>
   </main>
   <footer>
-    <!-- place footer here -->
+    <x-footer></x-footer>
   </footer>
 </body>
 

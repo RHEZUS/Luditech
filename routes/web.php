@@ -123,5 +123,5 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/blog',[BlogController::class,'getBlog'])->name('blog');
-Route::get('/events',[EventController::class,'events'])->name('events');
 Route::get('/causes',[CauseController::class,'causes'])->name('causes');
+Route::get('/events',[EventController::class,'events'])->name('events');

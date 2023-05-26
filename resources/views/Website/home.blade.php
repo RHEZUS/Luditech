@@ -1,177 +1,200 @@
 
-
-<body style="background-color: white;">
-    <header>
-        <x-header></x-header>
-    </header>
-    <main>
-        <div class="homepage-section-1 m-0 p-0" style="">
-
-            <div class="container-fluid m-0 p-0"  style="margin-top: 300px;">
-                <div id="carouselId" class="carousel slide" data-bs-ride="carousel" >
-                    <ol class="carousel-indicators" style="z-index: 10;">
-                        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
-                        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-                        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
-                            <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="w-100 d-block" alt="First slide">
-                            <div class="carousel-caption d-none d-md-block" style="top:170px; z-index: 10;">
-                                <h1 >Lorem ipsum dolor sit amet.</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, facere? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, facere?</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://images.unsplash.com/photo-1643321611132-15f7b8a63347?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="w-100 d-block" alt="Second slide">
-                            <div class="carousel-caption d-none d-md-block" style="top:170px; z-index: 10;">
-                                <h1 >Lorem ipsum dolor sit amet.</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, facere? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, facere?</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://images.unsplash.com/photo-1473649085228-583485e6e4d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80" class="w-100 d-block" alt="Third slide">
-                            <div class="carousel-caption d-none d-md-block" style="top:170px; z-index: 10;">
-                                <h1 >Lorem ipsum dolor sit amet.</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, facere? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, facere?</p>
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    </head>
+    <body style="background-color: white;">
+        <header>
+            <x-header></x-header>
+        </header>
+        <main>
+            <section class="carosal-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="client owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="text">
+                                        <h3>CHILDREN NEED YOUR HELP</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim <br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+                                        <h5 class="white-button"><a href="#">DONATE NOW</a></h5>
+                                        <h5><a href="#">CONTACT US</a></h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="text">
+                                        <h3>CHILDREN NEED YOUR HELP</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim <br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+                                        <h5 class="white-button"><a href="#">DONATE NOW</a></h5>
+                                        <h5><a href="#">CONTACT US</a></h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="text">
+                                        <h3>CHILDREN NEED YOUR HELP</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim <br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+                                        <h5 class="white-button"><a href="#">DONATE NOW</a></h5>
+                                        <h5><a href="#">CONTACT US</a></h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="text">
+                                        <h3>CHILDREN NEED YOUR HELP</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim <br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+                                        <h5 class="white-button"><a href="#">DONATE NOW</a></h5>
+                                        <h5><a href="#">CONTACT US</a></h5>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="text">
+                                        <h3>CHILDREN NEED YOUR HELP</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim <br> ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+                                        <h5 class="white-button"><a href="#">DONATE NOW</a></h5>
+                                        <h5><a href="#">CONTACT US</a></h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button style="z-index: 10;">
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button style="z-index: 10;">
                 </div>
-            </div>
+            </section>
 
-        </div>
-
-        <div class="homepage-section-2 p-4 latest-causes">
-            <div class="container">
-                <div class="section-title mx-auto">
-                    <h1 class="text-center"> Our causes </h1>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.  quidem suscipit aperiam ad excepturi beatae possimus! </p>
-                    
+            <section class="our_activity bg-light">
+                <div class="container-fluid container-md">
+                    <ul class="activities">
+                        <li class="act_item item-1">
+                            <article class="infobox">
+                                <h6 class="title"><i class="fa-sharp fa-solid fa-scale-balanced me-2"></i><a href="#"> Sollicitudin</a></h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quidem deleniti cum [&hellip;]</p>
+                                <a href="#" class="more float-end text-decoration-none">Read More</a>
+                            </article>
+                        </li>
+                        <li class="act_item item-1">
+                            <article class="infobox">
+                                <h6 class="title"><i class="fa-solid fa-sack-dollar me-2"></i><a href="#"> Rhoncus</a></h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quidem deleniti cum [&hellip;]</p>
+                                <a href="#" class="more float-end text-decoration-none">Read More</a>
+                            </article>
+                        </li>
+                        <li class="act_item item-1">
+                            <article class="infobox">
+                                <h6 class="title"><i class="fa-solid fa-motorcycle me-2"></i><a href="#"> Fringalla</a></h6>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quidem deleniti cum [&hellip;]</p>
+                                <a href="#" class="more float-end text-decoration-none">Read More</a>
+                            </article>
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="row">
-
-                    @foreach ($causes as $cause)
-
-                    <div class="col-md-4">
-
-                        <div class="cause-container w-100 rounded bg-light">
-                            <div class="cause-image w-100" style="background-image: url('{{ asset('storage/thumbnails/'.$cause->thumbnail)}}');"></div>
-                            <div class="body w-100 py-3" style="border-top: 1px solid darkgrey;">
-                                <div class="cause-infos w-100 px-3">
-                                    <div class="percentage d-flex align-items-center w-100">
-                                        <h4>{{($cause->actual_donation * 100) /($cause->exp_donation)}} %</h4>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <p><span style="--percentage:{{($cause->actual_donation * 100) /($cause->exp_donation).'%'}};"></span></p>
-                                    </div>
-                                    <div class="title d-flex align-items-center w-100">
-                                        <h4> {{$cause->title}} </h4>
-                                    </div>
-
-                                    <div class="details w-100">
-                                        <small class="d-flex align-items-center" style="height: 30px;">Donatetion Collected {{'$'.$cause->actual_donation . ' '}} of {{'$'. $cause->exp_donation.' '}}</small>
+            </section>
+            <section class="our_cuauses">
+                <h2>OUR CAUSES</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. </p>
+                <div class="container-fluid container-md" >
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="our_cuauses_single w-100 owl-carousel owl-theme w-100 m-0">
+                                @foreach ($causes as $cause)
+                                <div class="item">
+                                    <img src="{{ asset('storage/thumbnails/'.$cause->thumbnail)}}" alt="">
+                                    <div class="details">
+                                        <h2>{{$cause->title}}</h2>
+                                        <p style="height: 210px;">{{$cause->description}}</p>
+                                        <div class="progress-text">
+                                            <p class="progress-top" style="--width:{{($cause->actual_donation * 100) /($cause->exp_donation).'%'}};">{{($cause->actual_donation * 100) /($cause->exp_donation)}} %</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:{{($cause->actual_donation * 100) /($cause->exp_donation).'%'}};"></div>
+                                            </div>
+                                            <p class="progress-left">Raised: <span>{{'$'.$cause->actual_donation}}</span></p>
+                                            <p class="progress-right">Goal: <span>{{'$'. $cause->exp_donation}}</span></p>
+                                        </div>
+                                        <h2 class="borderes" style="padding-top: 10px;"><a href="#">DONATE NOW</a></h2>
                                     </div>
                                 </div>
-                                <div class="learn-more w-100 text-end px-3">
-                                    <a href="#" >Donate now</a>
-                                </div>
+                                @endforeach
                             </div>
-                                
                         </div>
                     </div>
-                    @endforeach
-                    
+                </div>
+            </section>
+
+            <div class="block-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-6 for-border">
+                            <div class="block">
+                                <p><i class='bx bxs-heart'></i></p>
+                                <p class="counter-wrapper"><span class="fb"></span></p>
+                                <p class="text-block">CAUSES</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6 for-border">
+                            <div class="block">
+                                <p><i class='bx bx-user-plus' ></i></p>
+                                <p class="counter-wrapper"><span class="bike"></span></p>
+                                <p class="text-block">VOLUNTEERS</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-6 for-border">
+                            <div class="block">
+                                <p><i class='bx bx-user'></i></p>
+                                <p class="counter-wrapper"><span class="coffee"></span></p>
+                                <p class="text-block">SAVED</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-        </div>
 
-
-        <div class="homepage-section-3 p-4 our-values">
-            <div class="container py-4">
-                <div class="section-title mx-auto mb-4" style="position: relative; z-index: 1;">
-                    <h1 class="text-center text-white"> Our Values </h1>
-                    <p class="text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.  quidem suscipit aperiam ad excepturi beatae possimus! </p>
-                    
-                </div>
+            <section class="homepage-section-4 p-4 latest-post">
                 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card p-2 value">
-                            <div class="card-body">
-                                <i class='bx bx-heart fs-2 my-2 mx-auto'></i>
-                                <h3>Love</h3>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, consequatur totam laboriosam?</p>
+                <h2>Latest Articles</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua. </p>
+                
+                <div class="container">
+                    
+                    <div class="row">
+                        @foreach ($posts as $post)
+
+
+                        <div class="col-md-4">
+                            <div class="article-container w-100">
+                                <div class="article-image w-100" style="background-image: url('{{ asset('storage/thumbnails/'.$post->thumbnail)}}');"></div>
+                                <div class="body w-100 py-3">
+                                    <div class="article-infos w-100 px-3" style="border-top: 1px solid darkgrey;">
+                                        <div class="title d-flex align-items-center w-100">
+                                            <h4>{{$post->title}}</h4>
+                                        </div>
+                                        <div class="description d-flex align-items-center w-100">
+                                            <p> {{$post->desc}}</p>
+                                        </div>
+                                        <div class="details w-100">
+                                            <small class="d-flex align-items-center" style="height: 30px;"><span class="me-3">ON: {{$post->updated_at->format('m/d/Y')}}</span> <span>By: Ludivin</span></small>
+                                        </div>
+                                    </div>
+                                    <div class="learn-more w-100 text-end px-3">
+                                        <a href="#" >Read More...</a>
+                                    </div>
+                                </div>
+                                    
+                            </div>
                             
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-
-        <div class="homepage-section-4 p-4 latest-post">
-            <div class="container">
-                <div class="section-title mx-auto">
-                    <h1 class="text-center"> Latest Posts </h1>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.  quidem suscipit aperiam ad excepturi beatae possimus! </p>
-                    
-                </div>
-                
-                <div class="row">
-                    @foreach ($posts as $post)
-
-
-                    <div class="col-md-4">
-                        <div class="article-container w-100">
-                            <div class="article-image w-100" style="background-image: url('{{ asset('storage/thumbnails/'.$post->thumbnail)}}');"></div>
-                            <div class="body w-100 py-3">
-                                <div class="article-infos w-100 px-3" style="border-top: 1px solid darkgrey;">
-                                    <div class="title d-flex align-items-center w-100">
-                                        <h4>{{$post->title}}</h4>
-                                    </div>
-                                    <div class="description d-flex align-items-center w-100">
-                                        <p> {{$post->desc}}</p>
-                                    </div>
-                                    <div class="details w-100">
-                                        <small class="d-flex align-items-center" style="height: 30px;"><span class="me-3">ON: {{$post->updated_at->format('m/d/Y')}}</span> <span>By: Ludivin</span></small>
-                                    </div>
-                                </div>
-                                <div class="learn-more w-100 text-end px-3">
-                                    <a href="#" >Read More...</a>
-                                </div>
-                            </div>
-                                
-                        </div>
+                        </div>  
+                        @endforeach
                         
-                    </div>  
-                    @endforeach
-                    
+                    </div>
                 </div>
-            </div>
-            
-        </div>
+                
+            </section>
 
 
 
-    </main>
-    <footer>
-        <x-footer></x-footer>
-    </footer>
+        </main>
+        <footer>
+            <x-footer></x-footer>
+        </footer>
 
-</body>
+    </body>
 
 </html>
